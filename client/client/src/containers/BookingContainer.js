@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import { getBookings } from '../BookingService';
+import BookingCard from '../components/BookingCard';
 import BookingForm from '../components/BookingForm';
 
 
@@ -34,6 +35,7 @@ const BookingContainer = () => {
         <>
         <h4>This is a container</h4>
         <BookingForm addBooking = {addBooking}/>
+        <BookingCard booking = {booking} key={booking._id} removeBooking = {removeBooking}/>
         </>
     )
 }
